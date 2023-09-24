@@ -132,9 +132,12 @@ def handler(context: dict, request: Request) -> Response:
     )
 
     img_out = output.images[0]
+    # Make return image smaller to fit under 1MB
+    img_out = img_out.resize((704, 704), Image.ANTIALIAS)
+
     fname = f"out.png"
     buffered = BytesIO()
-    img_out.save(buffered, format="png")
+    img_out.save(buffered, format="png", optimize=True, quality=70)
     img_data = buffered.getvalue()
     compressed_img_data = gzip.compress(img_data)
     compressed_img_str = base64.b64encode(compressed_img_data).decode('utf-8')
