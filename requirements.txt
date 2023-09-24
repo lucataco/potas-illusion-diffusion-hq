@@ -1,0 +1,8 @@
+potassium
+torch
+transformers
+diffusers
+accelerate
+qrcode
+ftfy
+scipy
