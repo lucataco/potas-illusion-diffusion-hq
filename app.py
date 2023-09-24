@@ -133,7 +133,7 @@ def handler(context: dict, request: Request) -> Response:
 
     img_out = output.images[0]
     # Make return image smaller to fit under 1MB
-    img_out = img_out.resize((640, 640), Image.ANTIALIAS)
+    img_out = img_out.resize((576, 576), Image.ANTIALIAS)
 
     fname = f"out.png"
     buffered = BytesIO()
