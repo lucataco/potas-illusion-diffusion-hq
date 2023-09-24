@@ -1,14 +1,15 @@
-# My Potassium App
+# Potassium Illusion Diffusion HQ
 This is a Potassium HTTP server, created with `banana init` CLI
 
-### Testing
-Start a local dev server with `banana dev`
+Implementation of Monster Labs QrCode ControlNet on top of SD Realistic Vision v5.1 
 
-### Deployment
-1. Create empty repo on [Github](https://github.com)
-2. Push this repo to github
+### Example
+
 ```
-git remote add origin https://github.com/{username}/{repo-name}.git
+prompt="(masterpiece:1.4), (best quality), (detailed), Medieval village scene with busy streets and castle in the distance"
+negative_prompt="ugly, disfigured, low quality, blurry, nsfw"
+image="spiral.png"
+seed=2288773312
 ```
-3. [Log into Banana](https://app.banana.dev/onboard)
-4. Select this repo to build and deploy!
+
+![Potassium Illusion Diffusion HQ](output.png)
